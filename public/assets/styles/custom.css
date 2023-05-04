@@ -1,0 +1,304 @@
+.flat-questions a.questions {
+  padding-left: 0;
+}
+.top.style2 .flat-open-hours .icon,
+.top.style2 .flat-address .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header.style2 #mainnav .menu > li > a:hover {
+  color: #fff;
+}
+
+.top.style2 .flat-open-hours .icon,
+.top.style2 .flat-address .icon {
+  min-width: 45px;
+}
+
+.flat-open-hours .text {
+  text-align: left !important;
+}
+
+.top.style2 .flat-open-hours,
+.top.style2 .flat-address {
+  margin: 0;
+}
+
+.text-container h1 {
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 50px;
+  opacity: 1;
+  color: #fff;
+}
+.text-container p {
+  text-align: left;
+  letter-spacing: 0px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.btn-primary {
+  border-color: #18ba60;
+  background: #18ba60;
+  visibility: inherit;
+  text-align: inherit;
+  line-height: 45px;
+  border-width: 2px;
+  margin: 0px;
+  padding: 0px 23px 0px 24px;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #2e363a;
+  border-color: #2e363a;
+}
+.btn-secondary {
+  background-color: #2e363a;
+  border-color: #2e363a;
+  visibility: inherit;
+  text-align: inherit;
+  line-height: 45px;
+  border-width: 2px;
+  margin: 0px;
+  padding: 0px 23px 0px 24px;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+  border-color: #18ba60;
+  background: #18ba60;
+}
+
+.iconbox .box-header .box-title {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.details ul > li {
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 5px;
+}
+
+.details ul > li:before {
+  content: "\2714";
+  font-weight: 900;
+  transition: all 0.5s;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 50%;
+  background-color: #18ba60;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+.flat-questions a.appointment {
+  line-height: 23px;
+}
+
+.widget-box .widget-services .one-half {
+  width: 100%;
+}
+.splide__pagination__page.is-active {
+  background-color: #18ba60 !important;
+}
+
+.text-container-secondary .breadcrumbs li a {
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+
+.text-container-secondary .breadcrumbs li:last-child {
+  color: #fff;
+}
+
+.text-container-secondary .breadcrumbs li a:hover {
+  color: #fff;
+}
+
+.text-container-secondary .breadcrumbs li:last-child {
+  color: #fff;
+}
+
+.text-container-secondary .breadcrumbs li a i {
+  padding: 0 5px 0 9px;
+}
+
+@media (max-width: 768px) {
+  .flat-callback-form .flat-field .field-email input {
+    margin-top: 0;
+  }
+}
+article.post.style2 .featured-post ul.post-date {
+  left: 10px;
+  padding: 2px 8px 7px 8px;
+}
+article.post .featured-post ul.post-date .day {
+  font-size: 22px;
+}
+article.post .featured-post ul.post-date .month {
+  font-size: 14px;
+}
+article.post .featured-post ul.post-date .year {
+  font-size: 14px;
+}
+article.post .content-post .more-link a {
+  padding: 0 20px;
+}
+
+.wrap-main-post .title {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 20px 0;
+  color: #222222;
+}
+
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  line-height: 1.2;
+  font-weight: 600;
+  color: #222222;
+}
+
+.blog-content h2 {
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+.blog-content h3 {
+  font-size: 26px;
+  padding-bottom: 6px;
+}
+.blog-content h4 {
+  font-size: 24px;
+  padding-bottom: 4px;
+}
+.blog-content h5 {
+  font-size: 22px;
+  padding-bottom: 2px;
+}
+.blog-content h6 {
+  font-size: 20px;
+  padding-bottom: 2px;
+}
+.blog-content ul {
+  margin-bottom: 20px;
+}
+.blog-content ul li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 30px;
+}
+.blog-content ul li:before {
+  content: "\2714";
+  color: #18ba60;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: block;
+  padding-top: 1px;
+  line-height: normal;
+  transform: translate3d(0, -50%, 0);
+}
+@media (max-width: 768px) {
+  .wrap-main-post .title {
+    font-size: 28px;
+  }
+
+  .blog-content h2 {
+    font-size: 24px;
+    padding-bottom: 8px;
+  }
+  .blog-content h3 {
+    font-size: 22px;
+    padding-bottom: 6px;
+  }
+  .blog-content h4 {
+    font-size: 20px;
+    padding-bottom: 4px;
+  }
+  .blog-content h5 {
+    font-size: 18px;
+    padding-bottom: 2px;
+  }
+  .blog-content h6 {
+    font-size: 16px;
+    padding-bottom: 2px;
+  }
+}
+
+.entry-post p {
+  text-align: justify;
+}
+.content-post .title-post {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.content-post .position {
+  margin-bottom: 6px;
+}
+
+p > a {
+  color: #18ba60;
+}
+
+.title-section h2 {
+  line-height: 1.2;
+}
+
+@media (max-width: 591px) {
+  .title-section h2 {
+    font-size: 24px;
+  }
+}
+.btn-menu {
+  margin: 25px 0px 25px 20px;
+}
+
+.details p,
+.details ul li,
+.box-content p,
+.flat-imagebox-desc p,
+.toggle-content p,
+.widget-box .widget-text p {
+  text-align: justify;
+}
+.flat-imagebox-desc p {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 991px) {
+  .widget-box .widget-text p {
+    max-width: 90%;
+  }
+}

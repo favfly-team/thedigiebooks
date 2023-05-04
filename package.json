@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.10",
-    "@next/font": "13.2.3",
     "@prismicio/client": "^5.1.1",
     "@splidejs/react-splide": "^0.7.12",
     "airtable": "^0.11.6",

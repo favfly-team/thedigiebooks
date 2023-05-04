@@ -1,16 +1,14 @@
-// import Footer from "../footer/Footer";
-// import Header from "../header/Header";
-import UpArrow from "../UpArrow";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 import WhatsappButton from "../WhatsappButton";
 
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div>{children}</div>
-      {/* <Footer /> */}
+      <Footer />
       <WhatsappButton number="+91" text="Hi" />
-      <UpArrow />
     </>
   );
 };
