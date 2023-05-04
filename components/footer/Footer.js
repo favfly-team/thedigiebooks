@@ -158,7 +158,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
               title="Best digital marketing company in kolkata"
-              href="https://favfly.com?ref=omconcreteproducts.com"
+              href={`https://favfly.com?ref=${process.env.NEXT_PUBLIC_PRISMIC_ID}.${process.env.NEXT_PUBLIC_TLD}`}
               className="container pt-3 d-block">
               Growing with Favfly
             </a>

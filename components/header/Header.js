@@ -3,6 +3,7 @@ import HeaderTop from "./HeaderTop";
 import TopBar from "./TopBar";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
   // useEffect(() => {
@@ -87,10 +88,11 @@ const Header = () => {
 
 const NavItem = ({ data }) => {
   const { title, url, dropdown } = data;
+  const router = useRouter();
 
   return (
     <li>
-      <Link href={url}>
+      <Link href={url} className={router.pathname == url ? "active-nav" : ""}>
         {title}
         {dropdown && (
           <i className="ml-2">

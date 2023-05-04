@@ -353,3 +353,20 @@ p > a {
   border-left-color: #18ba60 !important;
   z-index: 9999 !important;
 }
+
+.active-nav {
+  color: #18ba60 !important;
+}
+.header.style2 #mainnav .menu > li > a {
+  font-weight: 500;
+}
+
+.flat-callback-form .flat-field .field-submit button.button-submit-field:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #2e363a;
+}
+
+:focus {
+  outline: none !important;
+}

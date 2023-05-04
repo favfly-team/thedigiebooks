@@ -10,7 +10,7 @@ const HeaderTop = () => {
             <div id="logo" className="logo">
               <Link href="/">
                 <img
-                  src="https://themesflat.co/html/finance/images/logo-blog.png"
+                  src="https://images.prismic.io/thedigiebooks/2ecd8fa2-cc22-4384-b598-fe7f5b139e7d_logo.png?auto=compress,format"
                   alt="logo Finance Business"
                 />
               </Link>
