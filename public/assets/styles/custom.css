@@ -340,3 +340,16 @@ p > a {
 .info-address p {
   margin-bottom: 5px;
 }
+
+/* ========== PROGRESS BAR ========= */
+#nprogress .bar {
+  background: #18ba60 !important;
+  z-index: 9999 !important;
+  height: 4px !important;
+  border-radius: 10px !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: #18ba60 !important;
+  border-left-color: #18ba60 !important;
+  z-index: 9999 !important;
+}
