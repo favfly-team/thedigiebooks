@@ -1,46 +1,57 @@
-const FeaturesSection = () => {
+import { useEffect } from "react";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
+import lozad from "lozad";
+
+const FeaturesSection = ({ slice }) => {
   return (
     <section className="flat-row flat-iconbox bg-theme">
       <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="title-section left">
-              <h2>Our Services</h2>
+        {slice?.primary?.heading?.[0]?.text && (
+          <div className="row">
+            <div className="col-md-12">
+              <div className="title-section left">
+                <h2>{slice?.primary?.heading?.[0]?.text}</h2>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className="row">
-          <FeatureItem />
-          <FeatureItem />
-          <FeatureItem />
-          <FeatureItem />
-          <FeatureItem />
-          <FeatureItem />
+          {slice?.items?.map((item, index) => (
+            <FeatureItem key={index} data={item} />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-const FeatureItem = () => {
+const FeatureItem = ({ data }) => {
+  const { icon, title1, details } = data;
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
+
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="iconbox-item mb-0 d-flex">
         <div className="icon">
-          <img src="https://i.ibb.co/2SCvcTP/process.png" alt="" />
+          <img className="lozad" src={icon?.url} alt={icon?.alt} />
         </div>
         <div className="iconbox">
           <div className="box-header">
             <div className="box-title">
-              <a>Accounting and bookkeeping</a>
+              <a>{title1?.[0]?.text}</a>
             </div>
           </div>
           <div className="box-content">
-            <p>
-              Get rid of those low-margin and time-consuming activities; and
-              make time to focus on practice areas that are more profitable.
-            </p>
+            <RichText render={details} linkResolver={linkResolver} />
           </div>
         </div>
       </div>

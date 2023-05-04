@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
 
-const SecondaryHeroSection = () => {
+const SecondaryHeroSection = ({ slice }) => {
   const router = useRouter();
+
+  const { heading, description1, image } = slice?.primary;
 
   return (
     <>
@@ -12,13 +16,8 @@ const SecondaryHeroSection = () => {
           <div className="row align-items-center h-100">
             <div className="col-12">
               <div className="text-container text-container-secondary">
-                <h1>We Help businesses grow and innovate</h1>
-                <p>
-                  We combine a team of experienced finance, accounting, tax and
-                  HR professionals with our leading-edge workflow technology
-                  that streamlines process and delivers an unprecedented view of
-                  your company’s performance.
-                </p>
+                <h1>{heading?.[0]?.text}</h1>
+                <RichText render={description1} linkResolver={linkResolver} />
                 <ul className="breadcrumbs text-center">
                   <li>
                     <Link href="/">
@@ -41,7 +40,7 @@ const SecondaryHeroSection = () => {
       </div>
       <style jsx>{`
         .hero-container {
-          background-image: url("https://themesflat.co/html/finance/images/slides/slide1.png");
+          background-image: url(${image?.url});
           height: 50vh;
           background-repeat: no-repeat;
           background-size: cover;
@@ -58,27 +57,6 @@ const SecondaryHeroSection = () => {
           right: 0;
           bottom: 0;
           opacity: 0.5;
-        }
-        .text-container-secondary {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        .text-container-secondary h1 {
-          text-align: center;
-          font-size: 40px;
-        }
-        .text-container-secondary p {
-          text-align: center;
-          font-size: 16px;
-        }
-        @media (max-width: 591px) {
-          .text-container-secondary h1 {
-            font-size: 30px;
-          }
-          .text-container-secondary p {
-            text-align: center;
-            font-size: 14px;
-          }
         }
 
         .text-container-secondary .breadcrumbs li {

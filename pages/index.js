@@ -1,29 +1,77 @@
-import AboutSection from "../components/about/AboutSection";
-import BlogSection from "../components/blog/BlogSection";
-import ClientsSection from "../components/client/ClientsSection";
-import CounterSection from "../components/counter/CounterSection";
-import CtaSection from "../components/cta/CtaSection";
-import FaqSection from "../components/faq/FaqSection";
-import FeaturesSection from "../components/features/FeaturesSection";
-import HeroSection from "../components/hero/HeroSection";
-import ServicesSection from "../components/service/ServicesSection";
-import SliderServiceSection from "../components/service/SliderServiceSection";
+import { useEffect } from "react";
+import lozad from "lozad";
+import { Client } from "../utils/prismicHelpers";
+import PrismicClient from "../utils/prismicClient";
+import gql from "graphql-tag";
+import { SliceZone } from "../slices";
+import SEO from "../components/seo/SEO";
 
-const HomePage = () => {
+const HomePage = ({ doc, blogPosts }) => {
+  // ========== LOZAD INSTANTIATE ==========
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, [doc?.uid]);
+  // ========== END ==========
+
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <FeaturesSection />
-      <ServicesSection />
-      <CtaSection />
-      <FaqSection />
-      <CounterSection />
-      <SliderServiceSection />
-      <ClientsSection />
-      <BlogSection />
+      <SEO
+        doc={doc}
+        url={`https://${process.env.NEXT_PUBLIC_PRISMIC_ID}.${process.env.NEXT_PUBLIC_TLD}`}
+      />
+      <SliceZone
+        sliceZone={doc.data.body}
+        blogsData={blogPosts?.data?.allBlog_posts?.edges}
+      />
     </>
   );
 };
+
+export async function getServerSideProps({ preview = null, previewData = {} }) {
+  const { ref } = previewData;
+  const client = Client();
+  const doc = (await client.getSingle("home_page", ref ? { ref } : null)) || {};
+
+  if (doc.id == undefined) {
+    return {
+      props: null,
+      notFound: true,
+    };
+  }
+
+  const pClient = PrismicClient;
+
+  const blogPosts = await pClient.query({
+    query: gql`
+      query {
+        allBlog_posts(sortBy: published_date_DESC, first: 3) {
+          edges {
+            node {
+              title
+              description
+              featured_image
+              published_date
+              _meta {
+                uid
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      doc,
+      blogPosts,
+      preview,
+    },
+  };
+}
 
 export default HomePage;

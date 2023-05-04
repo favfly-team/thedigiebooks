@@ -1,33 +1,23 @@
-import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
+import Heading from "../heading/Heading";
+import { useEffect } from "react";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
+import lozad from "lozad";
+import { DocLink } from "../../utils/prismicHelpers";
 
-const ServicesSection = () => {
+const ServicesSection = ({ slice }) => {
   return (
     <section className="flat-row pd-services-post">
       <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="title-section center s1 mb-4">
-              <h2>What We Can Offer You </h2>
-              <p className="sub-title-section">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
-                <br />
-                incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Heading data={slice?.primary} />
 
         <div className="row">
           <div className="col-md-12">
             <div className="wrap-imagebox-grid">
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
-              <ServiceItem />
+              {slice?.items?.map((item, index) => (
+                <ServiceItem key={index} data={item} />
+              ))}
             </div>
           </div>
         </div>
@@ -36,34 +26,48 @@ const ServicesSection = () => {
   );
 };
 
-const ServiceItem = () => {
+const ServiceItem = ({ data }) => {
+  const { title1, details, image, button_link, button_text } = data;
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
+
   return (
     <div className="flat-imagebox services-grid item mb-5">
       <div className="flat-imagebox-inner">
-        <div className="flat-imagebox-image">
-          <img
-            className="w-100"
-            src="https://themesflat.co/html/finance/images/imagebox/04.jpg"
-            alt="img"
-          />
-        </div>
+        {image?.url && (
+          <div className="flat-imagebox-image">
+            <img
+              key={image?.url}
+              className="lozad w-100"
+              data-src={image?.url}
+              alt={image?.alt}
+            />
+          </div>
+        )}
         <div className="flat-imagebox-header">
           <h3 className="flat-imagebox-title">
-            <a href="#">Mutual Funds</a>
+            <DocLink link={button_link}>{title1?.[0]?.text}</DocLink>
           </h3>
         </div>
         <div className="flat-imagebox-content">
           <div className="flat-imagebox-desc">
-            <p>
-              Mutual funds pool money from many investors to purchase broad
-              range of investments, such as stocks.
-            </p>
+            <RichText render={details} linkResolver={linkResolver} />
           </div>
           <div className="flat-imagebox-button mt-0">
-            <Link href="/service-page">
-              Read More
-              <FaAngleRight className="ml-1" />
-            </Link>
+            {button_text?.[0]?.text && (
+              <DocLink link={button_link}>
+                <span>
+                  {button_text?.[0]?.text}
+                  <FaAngleRight className="ml-1" />
+                </span>
+              </DocLink>
+            )}
           </div>
         </div>
       </div>

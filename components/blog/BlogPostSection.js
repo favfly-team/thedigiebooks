@@ -1,53 +1,83 @@
-const BlogPostSection = () => {
+import dayjs from "dayjs";
+import { useEffect, useState } from "react";
+import { RichText } from "prismic-reactjs";
+import lozad from "lozad";
+import { linkResolver } from "../../prismic-configuration";
+import { FaRegCalendar } from "react-icons/fa";
+
+const BlogPostSection = ({ data, uid }) => {
+  const { description, featured_image, published_date, title } = data;
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
+
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-12 mx-auto">
           <div className="wrap-main-post about-v3">
             <div className="flexslider s2 mb-0">
-              <div className="mb-4">
-                <img
-                  className="w-100"
-                  src="https://themesflat.co/html/finance/images/about/s01.jpg"
-                  alt=""
-                />
-              </div>
-              <h1 className="title">Want to know more about Finance Plus?</h1>
-              <div className="blog-content box-content">
-                <p>
-                  Lorem ipsum <a href="">dolor sit amet</a> consectetur
-                  adipisicing elit. Sed quasi tenetur magnam excepturi commodi
-                  sequi quibusdam? Excepturi, eligendi quae? Itaque.
-                </p>
-                <h2>Want to know more about Finance Plus?</h2>
-                <p>
-                  In your life, you may have many times facing financial issues.
-                  It’s good if you know how to handle it by yourself and have
-                  enough time to take care of it. In other cases, it’s time you
-                  get a financial consulting service. And the article below will
-                  show you those cases.quisquam est, qui dolorem ipsum quia
-                  dolor sit amet, consectetur, adipisci velit, sed quia non
-                  numquam eius modi tempora incidunt ut labore et dolore magnam
-                  aliquam quaerat voluptatem.
-                </p>
-
-                <ul>
-                  <li>Want to know more about Finance Plus?</li>
-                  <li>Want to know more about Finance Plus?</li>
-                  <li>Want to know more about Finance Plus?</li>
-                  <li>Want to know more about Finance Plus?</li>
-                </ul>
-                <div>
+              {featured_image?.url && (
+                <div className="mb-4">
                   <img
-                    className="w-100"
-                    src="https://themesflat.co/html/finance/images/about/s01.jpg"
-                    alt=""
+                    key={featured_image?.url}
+                    className="lozad w-100"
+                    data-src={featured_image?.url}
+                    alt={featured_image?.alt}
                   />
                 </div>
+              )}
+
+              <div className="blog-details-meta">
+                <ul>
+                  <li>
+                    <i className="icon mr-2">
+                      <FaRegCalendar />
+                    </i>
+                    {dayjs(published_date).format("DD MMM, YYYY")}
+                  </li>
+                </ul>
+              </div>
+
+              <h1 className="title">{title?.[0]?.text}</h1>
+
+              <div className="blog-content box-content">
+                {data?.body?.map((item, index) => (
+                  <>
+                    <div key={index}>
+                      <RichText
+                        render={item?.primary?.details}
+                        linkResolver={linkResolver}
+                      />
+                    </div>
+                    {item?.items?.map((item, index) => (
+                      <div key={index}>
+                        <img
+                          key={item?.image?.url}
+                          className="lozad"
+                          data-src={item?.image?.url}
+                          alt={item?.image?.alt}
+                        />
+                      </div>
+                    ))}
+                  </>
+                ))}
               </div>
             </div>
           </div>
         </div>
+        <style jsx>{`
+          .icon {
+            position: relative;
+            color: #18ba60;
+            top: -2px;
+          }
+        `}</style>
       </div>
     </div>
   );

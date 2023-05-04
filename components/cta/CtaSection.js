@@ -1,23 +1,20 @@
-const CtaSection = () => {
+import Heading from "../heading/Heading";
+import { DocLink } from "../../utils/prismicHelpers";
+
+const CtaSection = ({ slice }) => {
   return (
     <>
       <section className="flat-row pd-services-post">
         <div className="container">
-          <div className="row">
-            <div className="col-md-10 col-lg-8 mx-auto">
-              <div className="title-section center s1 mb-4">
-                <h2>What We Can Offer You </h2>
-                <p className="sub-title-section">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-              <div className="text-center">
-                <a href="" className="btn-primary mr-3">
-                  Contact Us
-                </a>
-              </div>
-            </div>
+          <Heading data={slice?.primary} />
+          <div className="text-center">
+            {slice?.primary?.button_text?.[0]?.text && (
+              <DocLink link={slice?.primary?.button_link}>
+                <span className="btn-primary mr-3">
+                  {slice?.primary?.button_text?.[0]?.text}
+                </span>
+              </DocLink>
+            )}
           </div>
         </div>
       </section>

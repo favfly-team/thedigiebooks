@@ -1,15 +1,20 @@
-const CtaFormSection = () => {
+import { useState } from "react";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
+import Airtable from "airtable";
+
+const CtaFormSection = ({ slice }) => {
+  const { image, heading, description1 } = slice?.primary;
+
   return (
     <section className="flat-row flat-callback">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-4 mb-5 mb-lg-0">
             <div className="text-block-callback">
-              <h2>Get a Call Back</h2>
+              <RichText render={heading} />
               <div className="text-callback-content">
-                If you need to speak to us about a general query fill in the
-                form below and we will call you back within the same working
-                day.
+                <RichText render={description1} linkResolver={linkResolver} />
               </div>
             </div>
           </div>

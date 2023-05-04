@@ -1,38 +1,50 @@
-const AboutSection = () => {
+import { useEffect, useState } from "react";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
+import lozad from "lozad";
+import { DocLink } from "../../utils/prismicHelpers";
+
+const AboutSection = ({ slice }) => {
+  const { button_link, button_text, description1, heading, image } =
+    slice?.primary;
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
+
   return (
     <div className="pd-imagebox">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className="title-section s1">
-              <h2>Why choose us?</h2>
+              <RichText render={heading} />
               <div className="sub-title-section details">
-                <p>
-                  We led the charge in transitioning manual accounting methods
-                  to automated processes by implementing electronic workflow
-                  solutions into our business and outsourcing services. While
-                  many finance and accounting outsourcing firms claim to be
-                  innovative, they’re years behind in providing the systems and
-                  best practices we’ve been developing and delivering to clients
-                  for over a decade. We’re more than accountants, we’re trusted
-                  advisors.
-                </p>
-                <ul>
-                  <li>Expert team of professionals</li>
-                  <li>Confidentiality & Reasonable charges</li>
-                  <li>Timely Delivery of services</li>
-                  <li>Wide range of services under one roof</li>
-                </ul>
+                <RichText render={description1} linkResolver={linkResolver} />
               </div>
+              {button_text?.[0]?.text && (
+                <DocLink link={button_link}>
+                  <span className="btn-primary mt-3">
+                    {button_text?.[0]?.text}
+                  </span>
+                </DocLink>
+              )}
             </div>
           </div>
-          <div className="col-lg-6">
-            <img
-              className="w-100"
-              src="https://themesflat.co/html/finance/images/stage/image-03.png"
-              alt=""
-            />
-          </div>
+          {image?.url && (
+            <div className="col-lg-6">
+              <img
+                key={image?.url}
+                className="lozad w-100"
+                data-src={image?.url}
+                alt={image?.alt}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

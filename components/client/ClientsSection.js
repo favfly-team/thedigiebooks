@@ -1,21 +1,14 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import lozad from "lozad";
+import { useEffect } from "react";
+import Heading from "../heading/Heading";
 
-const ClientsSection = () => {
+const ClientsSection = ({ slice }) => {
   return (
     <section className="flat-row pd-imagebox">
       <div className="container">
-        <div className="row">
-          <div className="col-md-10 col-lg-8 mx-auto">
-            <div className="title-section center s1 mb-4">
-              <h2>What We Can Offer You </h2>
-              <p className="sub-title-section">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Heading data={slice?.primary} />
 
         <Splide
           options={{
@@ -38,28 +31,28 @@ const ClientsSection = () => {
               },
             },
           }}>
-          <SplideSlide>
-            <ClientItem />
-          </SplideSlide>
-          <SplideSlide>
-            <ClientItem />
-          </SplideSlide>
-          <SplideSlide>
-            <ClientItem />
-          </SplideSlide>
+          {slice?.items?.map((item, index) => (
+            <SplideSlide key={index}>
+              <ClientItem data={item} />
+            </SplideSlide>
+          ))}
         </Splide>
       </div>
     </section>
   );
 };
 
-const ClientItem = () => {
-  return (
-    <img
-      className="w-100"
-      src="https://www.thedigiebooks.com/images/partner/15.png"
-      alt=""
-    />
-  );
+const ClientItem = ({ data }) => {
+  const { image } = data;
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
+
+  return <img className="w-100 lozad" src={image?.url} alt={image?.alt} />;
 };
 export default ClientsSection;

@@ -1,7 +1,10 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { RichText } from "prismic-reactjs";
+import { linkResolver } from "../../prismic-configuration";
+import { DocLink } from "../../utils/prismicHelpers";
 
-const HeroSection = () => {
+const HeroSection = ({ slice }) => {
   return (
     <Splide
       options={{
@@ -18,20 +21,25 @@ const HeroSection = () => {
         pauseOnFocus: false,
         rewind: true,
       }}>
-      <SplideSlide>
-        <HeroItem />
-      </SplideSlide>
-      <SplideSlide>
-        <HeroItem />
-      </SplideSlide>
-      <SplideSlide>
-        <HeroItem />
-      </SplideSlide>
+      {slice?.items?.map((item, index) => (
+        <SplideSlide key={index}>
+          <HeroItem data={item} textData={slice?.primary} />
+        </SplideSlide>
+      ))}
     </Splide>
   );
 };
 
-const HeroItem = () => {
+const HeroItem = ({ data, textData }) => {
+  const {
+    button_link1,
+    button_text1,
+    button_link2,
+    button_text2,
+    heading,
+    description1,
+  } = textData;
+
   return (
     <>
       <div className="hero-container">
@@ -39,20 +47,23 @@ const HeroItem = () => {
           <div className="row align-items-center h-100">
             <div className="col-12">
               <div className="text-container">
-                <h1>We Help businesses grow and innovate</h1>
-                <p>
-                  We combine a team of experienced finance, accounting, tax and
-                  HR professionals with our leading-edge workflow technology
-                  that streamlines process and delivers an unprecedented view of
-                  your company’s performance.
-                </p>
+                {heading?.[0]?.text && <h1>{heading?.[0]?.text}</h1>}
+                <RichText render={description1} linkResolver={linkResolver} />
                 <div className="mt-4">
-                  <a href="" className="btn-primary mr-3">
-                    Our Company
-                  </a>
-                  <a href="" className="btn-secondary">
-                    Get in touch
-                  </a>
+                  {button_text1?.[0]?.text && (
+                    <DocLink link={button_link1}>
+                      <span className="btn-primary mr-3">
+                        {button_text1?.[0]?.text}
+                      </span>
+                    </DocLink>
+                  )}
+                  {button_text2?.[0]?.text && (
+                    <DocLink link={button_link2}>
+                      <span className="btn-secondary">
+                        {button_text2?.[0]?.text}
+                      </span>
+                    </DocLink>
+                  )}
                 </div>
               </div>
             </div>
@@ -61,7 +72,7 @@ const HeroItem = () => {
       </div>
       <style jsx>{`
         .hero-container {
-          background-image: url("https://themesflat.co/html/finance/images/slides/slide1.png");
+          background-image: url(${data?.image?.url});
           height: 70vh;
           background-repeat: no-repeat;
           background-size: cover;
