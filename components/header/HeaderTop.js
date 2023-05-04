@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const HeaderTop = () => {
@@ -7,12 +8,12 @@ const HeaderTop = () => {
         <div className="row">
           <div className="col-md-4 col-xs-12">
             <div id="logo" className="logo">
-              <a href="#">
+              <Link href="/">
                 <img
                   src="https://themesflat.co/html/finance/images/logo-blog.png"
                   alt="logo Finance Business"
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-md-8 col-xs-12">
@@ -37,8 +38,9 @@ const HeaderTop = () => {
                 Contacts
                 <br />
                 <span className="d-block">
-                  India : +91 7003860702, Usa : (240) 481-5325,
-                  hello@thedigiebooks.com
+                  India : +91 7003860702,
+                  <br />
+                  Usa : (240) 481-5325, <br /> hello@thedigiebooks.com
                 </span>
               </p>
             </div>

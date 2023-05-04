@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const TopBar = () => {
@@ -9,28 +10,24 @@ const TopBar = () => {
             <ul className="flat-infomation">
               <li className="phone">
                 <FaPhoneAlt className="mr-2" />
-                Call us:{" "}
-                <a href="%2b61383766284.html" title="phone">
-                  +61 3 8376 6284
+                Call us:
+                <a href="+917003860702" title="phone">
+                  +91 7003860702
                 </a>
               </li>
               <li className="email">
                 <FaEnvelope className="mr-2" />
-                Email:{" "}
-                <a href="mailto:support24-7@gmail.com" title="email">
-                  support24-7@gmail.com
+                Email:
+                <a href="mailto:hello@thedigiebooks.com" title="email">
+                  hello@thedigiebooks.com
                 </a>
               </li>
             </ul>
             <div className="flat-questions">
-              {/* <a href="#" title="" className="questions">
-                Have any questions?
-              </a> */}
-              <a href="#" className="appointment">
+              <Link href="/contact" className="appointment">
                 Contact Us
-              </a>
+              </Link>
             </div>
-            <div className="clearfix"></div>
           </div>
         </div>
       </div>
