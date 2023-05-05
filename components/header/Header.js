@@ -23,16 +23,7 @@ const Header = () => {
   const navItems = [
     { title: "Home", url: "/", dropdown: null },
     { title: "About", url: "/about", dropdown: null },
-    {
-      title: "Services",
-      url: "/services",
-      dropdown: [
-        { title: "Book Keeping", url: "/book-keeping" },
-        { title: "Financial Reporting", url: "/financial-reporting" },
-        { title: "Payroll", url: "/payroll" },
-        { title: "Accounts for Accounting", url: "/accounts-for-accounting" },
-      ],
-    },
+    { title: "Services", url: "/services", dropdown: null },
     { title: "Why Us", url: "/why-us", dropdown: null },
     { title: "Partners", url: "/partners", dropdown: null },
     { title: "Contact Us", url: "/contact", dropdown: null },
