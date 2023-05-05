@@ -19,7 +19,7 @@ const CtaFormSection = ({ slice }) => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
