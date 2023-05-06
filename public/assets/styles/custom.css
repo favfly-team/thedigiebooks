@@ -319,6 +319,14 @@ p > a {
   margin-bottom: 0;
 }
 
+.flat-imagebox-desc p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
 .text-container-secondary h1 {
   text-align: center;
   font-size: 40px;

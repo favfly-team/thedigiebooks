@@ -38,40 +38,47 @@ const ServiceItem = ({ data }) => {
   }, []);
 
   return (
-    <div className="flat-imagebox services-grid item mb-5">
-      <div className="flat-imagebox-inner">
-        {image?.url && (
-          <div className="flat-imagebox-image">
-            <img
-              key={image?.url}
-              className="lozad w-100"
-              data-src={image?.url}
-              alt={image?.alt}
-            />
+    <>
+      <div className="flat-imagebox services-grid item mb-5">
+        <div className="flat-imagebox-inner shadow-sm">
+          {image?.url && (
+            <div className="flat-imagebox-image">
+              <img
+                key={image?.url}
+                className="lozad w-100"
+                data-src={image?.url}
+                alt={image?.alt}
+              />
+            </div>
+          )}
+          <div className="flat-imagebox-header px-3">
+            <h3 className="flat-imagebox-title">
+              <DocLink link={button_link}>{title1?.[0]?.text}</DocLink>
+            </h3>
           </div>
-        )}
-        <div className="flat-imagebox-header">
-          <h3 className="flat-imagebox-title">
-            <DocLink link={button_link}>{title1?.[0]?.text}</DocLink>
-          </h3>
-        </div>
-        <div className="flat-imagebox-content">
-          <div className="flat-imagebox-desc">
-            <RichText render={details} linkResolver={linkResolver} />
-          </div>
-          <div className="flat-imagebox-button mt-0">
-            {button_text?.[0]?.text && (
-              <DocLink link={button_link}>
-                <span>
-                  {button_text?.[0]?.text}
-                  <FaAngleRight className="ml-1" />
-                </span>
-              </DocLink>
-            )}
+          <div className="flat-imagebox-content px-3 pb-3">
+            <div className="flat-imagebox-desc">
+              <RichText render={details} linkResolver={linkResolver} />
+            </div>
+            {/* <div className="flat-imagebox-button mt-0">
+              {button_text?.[0]?.text && (
+                <DocLink link={button_link}>
+                  <span>
+                    {button_text?.[0]?.text}
+                    <FaAngleRight className="ml-1" />
+                  </span>
+                </DocLink>
+              )}
+            </div> */}
           </div>
         </div>
       </div>
-    </div>
+      <style jsx>{`
+        .flat-imagebox {
+          overflow: visible;
+        }
+      `}</style>
+    </>
   );
 };
 
