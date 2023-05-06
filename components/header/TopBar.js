@@ -12,7 +12,7 @@ const TopBar = () => {
                 <FaPhoneAlt className="mr-2" />
                 Call us:{" "}
                 <a href="+917003860702" title="phone">
-                  +91 7003860702
+                  +91 70038 60702
                 </a>
               </li>
               <li className="email">
@@ -25,7 +25,7 @@ const TopBar = () => {
             </ul>
             <div className="flat-questions">
               <Link href="/contact" className="appointment">
-                Contact Us
+                Start your free trial
               </Link>
             </div>
           </div>

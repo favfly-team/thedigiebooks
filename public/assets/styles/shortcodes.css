@@ -154,7 +154,8 @@
   font-size: 20px;
   text-transform: none;
   letter-spacing: 0px;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: "Manrope", sans-serif;
 }
 
 .imagebox.style2 .imagebox-content {

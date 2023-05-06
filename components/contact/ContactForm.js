@@ -96,7 +96,7 @@ const ContactForm = () => {
       </div>
       <div className="input-info col-sm-6">
         <input
-          type="tel"
+          type="text"
           name="phone"
           placeholder="Phone"
           value={formData.phone}

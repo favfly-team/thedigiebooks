@@ -85,15 +85,15 @@ const Footer = () => {
                         <i className="footer-icon">
                           <FaPhoneAlt className="mr-1" />
                         </i>
-                        India : +91 7003860702
+                        India : +91 70038 60702
                       </a>
                     </li>
                     <li>
-                      <a href="tel:240481-5325" className="d-flex">
+                      <a href="tel:+1240-481-5325" className="d-flex">
                         <i className="footer-icon">
                           <FaPhoneAlt />
                         </i>
-                        Usa : (240) 481-5325
+                        Usa : +1 240-481-5325
                       </a>
                     </li>
                     <li>
@@ -107,7 +107,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="" className="d-flex">
+                      <a className="d-flex">
                         <i className="footer-icon">
                           <FaMapMarkerAlt />
                         </i>
@@ -118,7 +118,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="" className="d-flex">
+                      <a className="d-flex">
                         <i className="footer-icon">
                           <FaMapMarkerAlt />
                         </i>

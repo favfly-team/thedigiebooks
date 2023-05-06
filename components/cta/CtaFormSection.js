@@ -78,7 +78,6 @@ const CtaFormSection = ({ slice }) => {
               </div>
             </div>
           </div>
-
           <div className="col-md-8">
             <div className="flat-callback-form">
               <form onSubmit={handleSubmit}>
@@ -125,7 +124,7 @@ const CtaFormSection = ({ slice }) => {
                       required
                     />
                   </div>
-                  <div className="field-one-half field-submit">
+                  <div className="field-submit">
                     <button
                       type="submit"
                       name="submit"
@@ -134,26 +133,23 @@ const CtaFormSection = ({ slice }) => {
                     </button>
                   </div>
                 </div>
-                {error && (
-                  <div className="col-lg-12 col-md-12 col-sm-12 mt-3 mb-0 w-100">
-                    <p
-                      className="text-danger text-center h5"
-                      style={{ fontSize: "18px" }}>
-                      {error.message}
-                    </p>
-                  </div>
-                )}
-                {success && (
-                  <div className="col-lg-12 col-md-12 col-sm-12 mt-3 mb-0 w-100">
-                    <p
-                      className="text-success text-center h5"
-                      style={{ fontSize: "18px" }}>
-                      Thanks, we will contact you soon.
-                    </p>
-                  </div>
-                )}
               </form>
             </div>
+
+            {error && (
+              <p
+                className="text-danger text-center mt-3 h5"
+                style={{ fontSize: "18px" }}>
+                {error.message}
+              </p>
+            )}
+            {success && (
+              <p
+                className="text-success text-center mt-3 h5"
+                style={{ fontSize: "18px" }}>
+                Thanks, we will contact you soon.
+              </p>
+            )}
           </div>
         </div>
       </div>

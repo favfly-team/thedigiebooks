@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeaderTop from "./HeaderTop";
 import TopBar from "./TopBar";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -31,6 +31,12 @@ const Header = () => {
   ];
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    setShowMobileMenu(false);
+  }, [router]);
 
   return (
     <>

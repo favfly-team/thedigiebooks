@@ -30,7 +30,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
   letter-spacing: 1px;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 50px;
   opacity: 1;
   color: #fff;
@@ -97,7 +97,7 @@ p {
 .details ul > li {
   position: relative;
   padding-left: 36px;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .details ul > li:before {
@@ -219,12 +219,12 @@ article.post .content-post .more-link a {
   line-height: 30px;
 }
 .blog-content ul li:before {
-  content: "\2714";
+  content: "\2022";
   color: #18ba60;
-  font-size: 12px;
+  font-size: 27px;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 14px;
   display: block;
   padding-top: 1px;
   line-height: normal;
@@ -369,4 +369,40 @@ p > a {
 
 :focus {
   outline: none !important;
+}
+
+.flat-callback-form .flat-field .field-email input {
+  margin-top: 20px;
+}
+.flat-callback-form .flat-field .field-email input {
+  margin-bottom: 20px;
+}
+
+.title-section.s1 h2 {
+  padding-top: 0px;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: 400 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400 !important;
+}
+
+body {
+  font-weight: 500;
+}
+.title-section .sub-title-section {
+  font-size: 16px !important ;
+  line-height: 1.4;
 }

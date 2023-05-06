@@ -6,39 +6,46 @@ import Heading from "../heading/Heading";
 
 const ClientsSection = ({ slice }) => {
   return (
-    <section className="flat-row pd-imagebox">
-      <div className="container">
-        <Heading data={slice?.primary} />
+    <>
+      <section className="flat-row pd-imagebox">
+        <div className="container">
+          <Heading data={slice?.primary} />
 
-        <Splide
-          options={{
-            type: "loop",
-            perPage: 5,
-            perMove: 1,
-            gap: "1rem",
-            arrows: true,
-            pagination: true,
-            autoplay: true,
-            interval: 2000,
-            speed: 1000,
-            rewind: true,
-            breakpoints: {
-              787: {
-                perPage: 3,
+          <Splide
+            options={{
+              type: "loop",
+              perPage: 5,
+              perMove: 1,
+              gap: "1rem",
+              arrows: true,
+              pagination: true,
+              autoplay: true,
+              interval: 2000,
+              speed: 1000,
+              rewind: true,
+              breakpoints: {
+                787: {
+                  perPage: 3,
+                },
+                591: {
+                  perPage: 2,
+                },
               },
-              591: {
-                perPage: 2,
-              },
-            },
-          }}>
-          {slice?.items?.map((item, index) => (
-            <SplideSlide key={index}>
-              <ClientItem data={item} />
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-    </section>
+            }}>
+            {slice?.items?.map((item, index) => (
+              <SplideSlide key={index}>
+                <ClientItem data={item} />
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+      </section>
+      <style jsx>{`
+        .flat-row {
+          background: #f7f7f7;
+        }
+      `}</style>
+    </>
   );
 };
 

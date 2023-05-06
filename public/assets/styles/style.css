@@ -248,7 +248,8 @@ input::-moz-focus-inner {
 }
 
 body {
-  font: 14px/24px "Poppins", sans-serif;
+  /* font: 14px/24px "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
   background-color: #fff;
   color: #666666;
 }
@@ -315,7 +316,8 @@ input[type="submit"] {
   -moz-border-radius: 20px;
   border-radius: 3px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -488,7 +490,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "DM Serif Display", serif;
   font-weight: 400;
 }
 
@@ -565,7 +568,8 @@ h4 {
   color: #fff;
   padding: 7px 32px 7px 18px;
   border-radius: 3px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
   font-weight: 600;
   background-color: #18ba60;
   line-height: normal;
@@ -1388,7 +1392,8 @@ article.main-post .entry-content a.more-link:hover {
   color: #222222;
   font-weight: 700;
   font-size: 13px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
   background-color: #f1f1f1;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -2162,7 +2167,8 @@ article.post.style2 .featured-post ul.post-date {
   top: 0;
   font-size: 14px;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
 }
 
 .progress-item .perc {
@@ -2579,7 +2585,8 @@ article.post .content-post {
 .flat-text-block-timeline .year {
   font-size: 23px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Manrope", sans-serif;
   color: #18ba60;
   margin-bottom: 38px;
   position: relative;

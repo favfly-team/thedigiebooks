@@ -8,7 +8,10 @@ const Layout = ({ children }) => {
       <Header />
       <div>{children}</div>
       <Footer />
-      <WhatsappButton number="+91" text="Hi" />
+      <WhatsappButton
+        number="+917003860702"
+        text="Hi The Digie Books, I went through your website & want to discuss few things with you"
+      />
     </>
   );
 };
