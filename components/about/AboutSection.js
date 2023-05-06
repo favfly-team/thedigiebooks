@@ -22,7 +22,7 @@ const AboutSection = ({ slice }) => {
         <div className="row align-items-center">
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className="title-section s1">
-              <RichText render={heading} />
+              {heading?.[0]?.text && <RichText render={heading} />}
               <div className="sub-title-section details">
                 <RichText render={description1} linkResolver={linkResolver} />
               </div>
