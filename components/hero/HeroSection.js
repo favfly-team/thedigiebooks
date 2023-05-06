@@ -86,7 +86,7 @@ const HeroItem = ({ data, textData }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          opacity: 0.5;
+          opacity: 0.4;
         }
         .text-container {
           max-width: 700px;
