@@ -75,7 +75,7 @@ const CounterItem = ({ data }) => {
         }
         .iconbox-item {
           background: #fff;
-          padding: 15px 20px;
+          padding: 30px 20px;
         }
         .number {
           color: #18ba60 !important;

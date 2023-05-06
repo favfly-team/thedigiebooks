@@ -75,18 +75,20 @@ const SliderServiceItem = ({ data }) => {
             <a>{title1?.[0]?.text}</a>
           </h3>
         </div>
-        <div className="imagebox-content">
-          <div className="imagebox-desc">
-            <RichText render={details} linkResolver={linkResolver} />
+        {details?.[0]?.text && (
+          <div className="imagebox-content">
+            <div className="imagebox-desc">
+              <RichText render={details} linkResolver={linkResolver} />
+            </div>
+            <div className="imagebox-button">
+              {button_text?.[0]?.text && (
+                <DocLink link={button_link}>
+                  <span>{button_text?.[0]?.text}</span>
+                </DocLink>
+              )}
+            </div>
           </div>
-          <div className="imagebox-button">
-            {button_text?.[0]?.text && (
-              <DocLink link={button_link}>
-                <span>{button_text?.[0]?.text}</span>
-              </DocLink>
-            )}
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
