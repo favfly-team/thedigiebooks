@@ -427,3 +427,10 @@ body {
 .wrap-main-post.about-v3 {
   padding: 0 !important;
 }
+.top.style2 .flat-open-hours .icon,
+.top.style2 .flat-address .icon {
+  border: 2px solid #04a0ea !important;
+}
+.top.style2 {
+  color: #04a0ea;
+}
