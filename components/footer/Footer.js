@@ -31,14 +31,10 @@ const Footer = () => {
                 <div className="widget widget-text">
                   <h3 className="footer-heading">About Us</h3>
                   <p>
-                    Lorem ipsum dolor sit consectetur adipiscing elit sed do
-                    eiusmod tempor incididunt ut labore et dolore magna veniam
-                    aliqua.Ut enim ad minim veniam
-                  </p>
-                  <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate
+                    THEDIGIBOOKS is an online Book Keeping and Financial
+                    Accounting Service Provider. At THEDIGIBOOKS we aim at
+                    providing our clients with the best online accounting
+                    services from our end.
                   </p>
                 </div>
               </div>

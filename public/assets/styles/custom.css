@@ -61,12 +61,12 @@
   transition: background-color 0.3s ease;
 }
 .btn-primary:hover {
-  background-color: #2e363a;
-  border-color: #2e363a;
+  background-color: #04a0ea;
+  border-color: #04a0ea;
 }
 .btn-secondary {
-  background-color: #2e363a;
-  border-color: #2e363a;
+  background-color: #04a0ea;
+  border-color: #04a0ea;
   visibility: inherit;
   text-align: inherit;
   line-height: 45px;
@@ -258,7 +258,7 @@ article.post .content-post .more-link a {
 }
 
 .entry-post p {
-  text-align: justify;
+  font-size: 14px;
 }
 .content-post .title-post {
   font-weight: 500;
@@ -285,14 +285,14 @@ p > a {
   margin: 25px 0px 25px 20px;
 }
 
-.details p,
+/* .details p,
 .details ul li,
 .box-content p,
 .flat-imagebox-desc p,
 .toggle-content p,
 .widget-box .widget-text p {
   text-align: justify;
-}
+} */
 .flat-imagebox-desc p {
   margin-bottom: 10px;
 }
@@ -363,7 +363,7 @@ p > a {
 }
 
 .active-nav {
-  color: #18ba60 !important;
+  font-weight: 700 !important;
 }
 .header.style2 #mainnav .menu > li > a {
   font-weight: 500;
@@ -413,4 +413,17 @@ body {
 .title-section .sub-title-section {
   font-size: 16px !important ;
   line-height: 1.4;
+}
+
+.flat-infomation li a:hover,
+.flat-questions a:hover {
+  color: #fff;
+}
+
+.imagebox.style1 .imagebox-title {
+  background: rgb(4 160 234 / 90%);
+}
+
+.wrap-main-post.about-v3 {
+  padding: 0 !important;
 }

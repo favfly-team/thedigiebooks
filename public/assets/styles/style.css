@@ -586,7 +586,7 @@ h4 {
 /* Top
 -------------------------------------------------------------- */
 .top {
-  background-color: #3a526a;
+  background-color: #04a0ea;
   color: #ffffff;
   font-size: 12px;
   padding: 10px 0;
@@ -906,7 +906,7 @@ article.post .featured-post ul.post-date {
   position: absolute;
   top: 0;
   left: 45px;
-  background-color: #2e363a;
+  background-color: #04a0ea;
   color: #ffffff;
   text-align: center;
   font-size: 18px;
@@ -963,7 +963,7 @@ article.post .content-post .more-link {
 }
 
 article.post .content-post .more-link a {
-  background-color: #2e363a;
+  background-color: #04a0ea;
   border-radius: 3px;
   font-weight: 600;
   display: inline-block;
@@ -1406,7 +1406,7 @@ article.main-post .entry-content a.more-link:hover {
 
 .sidebar .widget.widget_nav_menu ul li.active,
 .sidebar .widget.widget_nav_menu ul li:hover {
-  background-color: #3a526a;
+  background-color: #04a0ea;
   color: #fff;
 }
 
@@ -1984,7 +1984,7 @@ article.post.style2 .featured-post ul.post-date {
 }
 
 .header.style2 {
-  background-color: #3a526a;
+  background-color: #04a0ea;
 }
 
 .header.style2 .nav-wrap {
@@ -2029,7 +2029,7 @@ article.post.style2 .featured-post ul.post-date {
 }
 
 .header.style2.v1 .flat-header-wrap {
-  background-color: #3a526a;
+  background-color: #04a0ea;
 }
 
 .header.style2.v1 .flat-header-wrap {
@@ -2040,7 +2040,7 @@ article.post.style2 .featured-post ul.post-date {
   width: 100%;
   left: 0;
   z-index: 9999;
-  background-color: #3a526a;
+  background-color: #04a0ea;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;

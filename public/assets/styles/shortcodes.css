@@ -916,7 +916,7 @@
 .flat-accordion .toggle-title {
   cursor: pointer;
   color: #fff;
-  background: #3a526a;
+  background: #04a0ea;
   padding: 14px 20px 14px 48px;
   position: relative;
   font-weight: 500;
@@ -946,7 +946,7 @@
 }
 
 .flat-accordion .toggle-title.active {
-  background: #3a526a;
+  background: #04a0ea;
 }
 
 .flat-accordion .toggle-title.active:after {
