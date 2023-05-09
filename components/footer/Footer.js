@@ -89,7 +89,7 @@ const Footer = () => {
                         <i className="footer-icon">
                           <FaPhoneAlt />
                         </i>
-                        Usa : +1 240-481-5325
+                        USA : +1 240-481-5325
                       </a>
                     </li>
                     <li>
@@ -119,7 +119,7 @@ const Footer = () => {
                           <FaMapMarkerAlt />
                         </i>
                         <span>
-                          Usa : 2010 Baltimore Road, Suite F42 Rockville, MD
+                          USA : 2010 Baltimore Road, Suite F42 Rockville, MD
                           20851
                         </span>
                       </a>

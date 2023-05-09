@@ -25,8 +25,9 @@ const HeaderTop = () => {
                 Address
                 <br />
                 <span>
-                  India : 14/100 golf club road Kolkata 700033,
-                  <br /> Usa: 2010 Baltimore Road, Suite F42 Rockville, MD 20851
+                  India : 14/100 Golf Club Road Kolkata 700033,
+                  <br /> USA : 2010 Baltimore Road, Suite F42 Rockville, MD
+                  20851
                 </span>
               </p>
             </div>
@@ -40,7 +41,7 @@ const HeaderTop = () => {
                 <span className="d-block">
                   India : +91 70038 60702,
                   <br />
-                  Usa : +1 240-481-5325, <br /> hello@thedigiebooks.com
+                  USA : +1 240-481-5325, <br /> hello@thedigiebooks.com
                 </span>
               </p>
             </div>
