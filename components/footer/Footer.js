@@ -107,10 +107,7 @@ const Footer = () => {
                         <i className="footer-icon">
                           <FaMapMarkerAlt />
                         </i>
-                        <span>
-                          India : 25/1, Baranashi Ghosh Street Kolkata 700007,
-                          India
-                        </span>
+                        <span>India : 14/110 Golf Club Road</span>
                       </a>
                     </li>
                     <li>
