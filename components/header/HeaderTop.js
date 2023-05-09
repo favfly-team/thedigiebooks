@@ -24,10 +24,17 @@ const HeaderTop = () => {
               <p className="text">
                 Address
                 <br />
+                <span className="d-flex mb-2 mt-2">
+                  <span className="mr-2">India:</span>
+                  <span>14/110, Golf Club Road, Kolkata, 700033</span>
+                </span>
                 <span>
-                  India : 14/110 Golf Club Road Kolkata 700033,
-                  <br /> USA : 2010 Baltimore Road, Suite F42 Rockville, MD
-                  20851
+                  <span className="d-flex">
+                    <span className="mr-2">USA:</span>
+                    <span>
+                      2010 Baltimore Road, Suite F42 Rockville, MD 20851
+                    </span>
+                  </span>
                 </span>
               </p>
             </div>
@@ -38,16 +45,40 @@ const HeaderTop = () => {
               <p className="text">
                 Contacts
                 <br />
-                <span className="d-block">
-                  India : +91 70038 60702,
-                  <br />
-                  USA : +1 240-481-5325, <br /> hello@thedigiebooks.com
+                <span className="d-flex mb-2 mt-2">
+                  <span className="mr-2">India:</span>
+                  <span>+91 70038 60702</span>
+                </span>
+                <span className="d-flex mb-2">
+                  <span className="mr-2">USA:</span>
+                  <span>+1 240-481-5325</span>
+                </span>
+                <span className="d-flex mb-2">
+                  <span>hello@thedigiebooks.com</span>
                 </span>
               </p>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .top.style2 .flat-open-hours .text,
+        .top.style2 .flat-address .text {
+          font-size: 18px;
+        }
+        .top.style2 .flat-open-hours .text span,
+        .top.style2 .flat-address .text span {
+          font-size: 14px;
+          font-weight: 600;
+          color: #262626;
+          line-height: 1.2;
+        }
+        @media (max-width: 991px) {
+          .top.style2 .flat-open-hours {
+            width: 100%;
+          }
+        }
+      `}</style>
     </div>
   );
 };

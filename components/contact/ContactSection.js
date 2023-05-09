@@ -53,7 +53,7 @@ const ContactSection = ({ slice }) => {
               src={map_link?.url}
               allowfullscreen
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         )}
       </div>
