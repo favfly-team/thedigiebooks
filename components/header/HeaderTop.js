@@ -25,7 +25,7 @@ const HeaderTop = () => {
                 Address
                 <br />
                 <span>
-                  India : 14/100 Golf Club Road Kolkata 700033,
+                  India : 14/110 Golf Club Road Kolkata 700033,
                   <br /> USA : 2010 Baltimore Road, Suite F42 Rockville, MD
                   20851
                 </span>
