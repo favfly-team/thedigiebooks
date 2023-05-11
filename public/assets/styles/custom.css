@@ -362,8 +362,16 @@ p > a {
   z-index: 9999 !important;
 }
 
-.active-nav {
-  font-weight: 700 !important;
+@media (min-width: 991px) {
+  .active-nav {
+    color: #ffffff !important;
+    background: #18ba60 !important;
+  }
+}
+@media (max-width: 991px) {
+  .active-nav {
+    color: #18ba60 !important;
+  }
 }
 .header.style2 #mainnav .menu > li > a {
   font-weight: 500;
@@ -433,4 +441,10 @@ body {
 }
 .top.style2 {
   color: #04a0ea;
+}
+
+.btn-menu:before,
+.btn-menu:after,
+.btn-menu span {
+  background-color: #fff;
 }

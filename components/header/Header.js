@@ -110,39 +110,4 @@ const NavItem = ({ data }) => {
   );
 };
 
-const SearchBar = () => {
-  return (
-    <>
-      <div className="flat-show-search">
-        <div className="show-search position-relative">
-          <a>
-            <FaSearch />
-          </a>
-        </div>
-        <div className="top-search">
-          <form>
-            <div>
-              <input
-                type="text"
-                id="s"
-                className="sss"
-                placeholder="Search..."
-              />
-              <input type="submit" value="" id="searchsubmit" />
-            </div>
-          </form>
-        </div>
-      </div>
-      <style jsx>{`
-        .show-search a {
-          font-size: 16px;
-          position: relative;
-          top: -2px;
-          color: #fff;
-        }
-      `}</style>
-    </>
-  );
-};
-
 export default Header;

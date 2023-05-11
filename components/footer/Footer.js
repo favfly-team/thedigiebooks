@@ -5,19 +5,21 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+
 import Link from "next/link";
 
 const Footer = () => {
   const quickLinks = [
     { title: "About", url: "/about" },
+    { title: "Why Us", url: "/why-us" },
     { title: "Services", url: "/services" },
     { title: "Blog", url: "/Blogs" },
   ];
 
   const companyLinks = [
-    { title: "Why Us", url: "/why-us" },
     { title: "Partners", url: "/partners" },
     { title: "Contact Us", url: "/contact-us" },
+    { title: "T & C", url: "/terms-and-conditions" },
     { title: "Privacy Policy", url: "/privacy-policy" },
   ];
 
@@ -31,10 +33,10 @@ const Footer = () => {
                 <div className="widget widget-text">
                   <h3 className="footer-heading">About Us</h3>
                   <p>
-                    THEDIGIBOOKS is an online Book Keeping and Financial
-                    Accounting Service Provider. At THEDIGIBOOKS we aim at
-                    providing our clients with the best online accounting
-                    services from our end.
+                    DIGIBOOKS is an online Book Keeping and Financial Accounting
+                    Service Provider. At DIGIBOOKS we aim at providing our
+                    clients with the best online accounting services from our
+                    end.
                   </p>
                 </div>
               </div>
@@ -133,7 +135,7 @@ const Footer = () => {
               <div className="col-12">
                 <div className="copyright">
                   <p className="text-center">
-                    Copyright © 2023 <Link href="/"> The Digie Books</Link>. All
+                    Copyright © 2023 <Link href="/"> Digie Books</Link>. All
                     Rights Reserved.
                   </p>
                 </div>

@@ -10,8 +10,9 @@ const HeaderTop = () => {
             <div id="logo" className="logo">
               <Link href="/">
                 <img
-                  src="https://images.prismic.io/thedigiebooks/2ecd8fa2-cc22-4384-b598-fe7f5b139e7d_logo.png?auto=compress,format"
-                  alt="logo Finance Business"
+                  className="logo-img"
+                  src="https://images.prismic.io/thedigiebooks/806e55c9-d396-48ff-8e2a-dc1e532308a4_Your+Trusted+Accounting+Partner+%282%29.png?auto=compress,format"
+                  alt="Digiebooks"
                 />
               </Link>
             </div>
@@ -62,6 +63,9 @@ const HeaderTop = () => {
         </div>
       </div>
       <style jsx>{`
+        .logo-img {
+          width: 180px;
+        }
         .top.style2 .flat-open-hours .text,
         .top.style2 .flat-address .text {
           font-size: 18px;

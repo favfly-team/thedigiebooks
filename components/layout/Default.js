@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <Footer />
       <WhatsappButton
         number="+917003860702"
-        text="Hi The Digie Books, I went through your website & want to discuss few things with you"
+        text="Hi Digie Books, I went through your website & want to discuss few things with you"
       />
     </>
   );
