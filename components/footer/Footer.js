@@ -28,7 +28,7 @@ const Footer = () => {
       <footer id="footer">
         <div className="footer-widgets">
           <div className="container">
-            <div className="row widget-box">
+            <div className="row widget-box pb-lg-3">
               <div className="col-md-10 col-lg-5 mb-4">
                 <div className="widget widget-text">
                   <h3 className="footer-heading">About Us</h3>
@@ -38,6 +38,19 @@ const Footer = () => {
                     clients with the best online accounting services from our
                     end.
                   </p>
+                  <div className="mt-4 mb-3 d-flex align-items-center">
+                    <img
+                      style={{ width: "100px" }}
+                      className="mr-3"
+                      src="https://images.prismic.io/thedigiebooks/957f1f3d-2ff9-470d-89df-a714e25b9690_BNI%2Bproud%2Bmember-removebg-preview.png"
+                      alt="BNI Proud Member"
+                    />
+                    <img
+                      style={{ width: "100px" }}
+                      src="https://images.prismic.io/thedigiebooks/9c61795e-d93e-424b-95ab-e87efe2ac03a_20f9c6aa-253d-4305-b6c4-9331a7b7232a_png-clipart-iso-9000-iso-9001-2015-international-organization-for-standardization-quality-management-system-business-blue-text-removebg-preview.png"
+                      alt="ISO Certified"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="col-md-6 col-lg-2 mb-4">

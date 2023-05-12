@@ -43,7 +43,7 @@ const BlogItem = ({ data }) => {
   const link = `/blog/${_meta?.uid}`;
 
   return (
-    <div className="col-md-4 mb-4">
+    <div className="col-sm-6 col-lg-4 mb-4">
       <article className="post style2 mb-0">
         <div className="featured-post">
           <Link href={link} className="post-image">

@@ -26,7 +26,7 @@ const SliderServicesSection = ({ slice }) => {
             speed: 1000,
             rewind: true,
             breakpoints: {
-              787: {
+              991: {
                 perPage: 2,
               },
               591: {
