@@ -33,16 +33,16 @@ const Footer = () => {
                 <div className="widget widget-text">
                   <h3 className="footer-heading">About Us</h3>
                   <p>
-                    DIGIBOOKS is an online Book Keeping and Financial Accounting
-                    Service Provider. At DIGIBOOKS we aim at providing our
-                    clients with the best online accounting services from our
-                    end.
+                    DIGIEBOOKS is an online Book Keeping and Financial
+                    Accounting Service Provider. At DIGIEBOOKS we aim at
+                    providing our clients with the best online accounting
+                    services from our end.
                   </p>
                   <div className="mt-4 mb-3 d-flex align-items-center">
                     <img
                       style={{ width: "100px" }}
                       className="mr-3"
-                      src="https://images.prismic.io/thedigiebooks/957f1f3d-2ff9-470d-89df-a714e25b9690_BNI%2Bproud%2Bmember-removebg-preview.png"
+                      src="https://images.prismic.io/thedigiebooks/0c923089-afa5-46bc-a2a1-9e15c5deed3d_BNI+Proud+Member.png"
                       alt="BNI Proud Member"
                     />
                     <img

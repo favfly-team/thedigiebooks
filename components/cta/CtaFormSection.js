@@ -153,6 +153,11 @@ const CtaFormSection = ({ slice }) => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .button-submit-field {
+          margin: 0 10px;
+        }
+      `}</style>
     </section>
   );
 };

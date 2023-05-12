@@ -29,7 +29,7 @@ const CounterItem = ({ data }) => {
   const { number, title1 } = data;
 
   return (
-    <div className="col-md-6 col-lg-4 mb-4">
+    <div className="col-md-6 col-lg-3 mb-4">
       <div className="iconbox-item mb-0 text-center d-flex flex-column align-items-center justify-content-center">
         <div className="iconbox">
           <div className="box-header">

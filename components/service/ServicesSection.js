@@ -13,13 +13,9 @@ const ServicesSection = ({ slice }) => {
         <Heading data={slice?.primary} />
 
         <div className="row">
-          <div className="col-md-12">
-            <div className="wrap-imagebox-grid">
-              {slice?.items?.map((item, index) => (
-                <ServiceItem key={index} data={item} />
-              ))}
-            </div>
-          </div>
+          {slice?.items?.map((item, index) => (
+            <ServiceItem key={index} data={item} />
+          ))}
         </div>
       </div>
     </section>
@@ -27,7 +23,7 @@ const ServicesSection = ({ slice }) => {
 };
 
 const ServiceItem = ({ data }) => {
-  const { title1, details, image, button_link, button_text } = data;
+  const { title1, details, image, button_link } = data;
 
   useEffect(() => {
     const observer = lozad(".lozad", {
@@ -39,43 +35,31 @@ const ServiceItem = ({ data }) => {
 
   return (
     <>
-      <div className="flat-imagebox services-grid item mb-5">
-        <div className="flat-imagebox-inner shadow-sm">
+      <div className="col-sm-6 col-md-6 col-lg-4 mb-5">
+        <div className="service-box shadow-sm px-3 h-100">
           {image?.url && (
-            <div className="flat-imagebox-image">
-              <img
-                key={image?.url}
-                className="lozad w-100"
-                data-src={image?.url}
-                alt={image?.alt}
-              />
-            </div>
+            <img
+              key={image?.url}
+              className="lozad w-100"
+              data-src={image?.url}
+              alt={image?.alt}
+            />
           )}
-          <div className="flat-imagebox-header px-3">
-            <h3 className="flat-imagebox-title">
+          <div className="text-content pt-4 pb-2">
+            <h3 className="service-title">
               <DocLink link={button_link}>{title1?.[0]?.text}</DocLink>
             </h3>
-          </div>
-          <div className="flat-imagebox-content px-3 pb-3">
-            <div className="flat-imagebox-desc">
-              <RichText render={details} linkResolver={linkResolver} />
-            </div>
-            {/* <div className="flat-imagebox-button mt-0">
-              {button_text?.[0]?.text && (
-                <DocLink link={button_link}>
-                  <span>
-                    {button_text?.[0]?.text}
-                    <FaAngleRight className="ml-1" />
-                  </span>
-                </DocLink>
-              )}
-            </div> */}
+            <RichText render={details} linkResolver={linkResolver} />
           </div>
         </div>
       </div>
       <style jsx>{`
-        .flat-imagebox {
-          overflow: visible;
+        .service-title {
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #222;
         }
       `}</style>
     </>

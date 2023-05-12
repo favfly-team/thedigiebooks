@@ -22,7 +22,7 @@ const FeatureBoxItem = ({ data }) => {
   return (
     <>
       <div className="col-md-6 col-lg-4 mb-4">
-        <article className="entry">
+        <article className="entry h-100">
           <div className="content-post">
             <div className="position">{subheading?.[0]?.text}</div>
             <h3 className="title-post">{title1?.[0]?.text}</h3>

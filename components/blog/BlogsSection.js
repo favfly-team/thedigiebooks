@@ -12,8 +12,9 @@ const BlogsSection = ({ blogsData }) => {
             <div className="title-section center s1 mb-5">
               <h2>Latest Blogs</h2>
               <p className="sub-title-section">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Discover insights and best practices in accounting management
+                with my informative and practical blog posts. Improve your
+                financial performance today.
               </p>
             </div>
           </div>
@@ -56,9 +57,13 @@ const BlogItem = ({ data }) => {
           </Link>
 
           {published_date && (
-            <ul className="post-date">
-              <li className="day">{dayjs(published_date).format("DD")}</li>
-              <li className="month">{dayjs(published_date).format("MMM")}</li>
+            <ul className="post-date d-flex align-items-center py-2">
+              <li className="month mr-1">
+                {dayjs(published_date).format("DD")}
+              </li>
+              <li className="month mr-1">
+                {dayjs(published_date).format("MMM")},
+              </li>
               <li className="year">{dayjs(published_date).format("YYYY")}</li>
             </ul>
           )}
