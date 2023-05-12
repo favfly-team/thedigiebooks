@@ -19,7 +19,7 @@ const Footer = () => {
   const companyLinks = [
     { title: "Partners", url: "/partners" },
     { title: "Contact Us", url: "/contact-us" },
-    { title: "T & C", url: "/terms-and-conditions" },
+    // { title: "T & C", url: "/terms-and-conditions" },
     { title: "Privacy Policy", url: "/privacy-policy" },
   ];
 
