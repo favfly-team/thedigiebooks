@@ -11,14 +11,14 @@ import Link from "next/link";
 const Footer = () => {
   const quickLinks = [
     { title: "About", url: "/about" },
-    { title: "Why Us", url: "/why-us" },
     { title: "Services", url: "/services" },
-    { title: "Blog", url: "/Blogs" },
+    { title: "Why Us", url: "/why-us" },
+    { title: "Blog", url: "/blogs" },
   ];
 
   const companyLinks = [
     { title: "Partners", url: "/partners" },
-    { title: "Contact Us", url: "/contact-us" },
+    { title: "Contact Us", url: "/contact" },
     // { title: "T & C", url: "/terms-and-conditions" },
     { title: "Privacy Policy", url: "/privacy-policy" },
   ];
@@ -92,7 +92,7 @@ const Footer = () => {
                   <h3 className="footer-heading">Contact Us</h3>
                   <ul className="one-half">
                     <li>
-                      <a href="tel:+917003860702" className="d-flex">
+                      <a className="d-flex">
                         <i className="footer-icon">
                           <FaPhoneAlt className="mr-1" />
                         </i>
@@ -100,7 +100,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="tel:+1240-481-5325" className="d-flex">
+                      <a className="d-flex">
                         <i className="footer-icon">
                           <FaPhoneAlt />
                         </i>
@@ -108,9 +108,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="mailto:hello@thedigiebooks.com"
-                        className="d-flex">
+                      <a className="d-flex">
                         <i className="footer-icon">
                           <FaEnvelope />
                         </i>

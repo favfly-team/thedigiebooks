@@ -466,3 +466,7 @@ body {
 .splide__arrow svg {
   fill: #fff !important;
 }
+
+.flat-infomation li.phone {
+  border-color: #fff;
+}

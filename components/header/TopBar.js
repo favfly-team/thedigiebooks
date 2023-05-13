@@ -10,17 +10,11 @@ const TopBar = () => {
             <ul className="flat-infomation">
               <li className="phone">
                 <FaPhoneAlt className="mr-2" />
-                Call us:{" "}
-                <a href="+917003860702" title="phone">
-                  +91 70038 60702
-                </a>
+                Call us: <a title="phone">+91 70038 60702</a>
               </li>
               <li className="email">
                 <FaEnvelope className="mr-2" />
-                Email:{" "}
-                <a href="mailto:hello@thedigiebooks.com" title="email">
-                  hello@thedigiebooks.com
-                </a>
+                Email: <a title="email">hello@thedigiebooks.com</a>
               </li>
             </ul>
             <div className="flat-questions">

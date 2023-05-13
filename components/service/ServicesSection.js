@@ -36,16 +36,16 @@ const ServiceItem = ({ data }) => {
   return (
     <>
       <div className="col-sm-6 col-md-6 col-lg-4 mb-5">
-        <div className="service-box shadow-sm px-3 h-100">
+        <div className="service-box shadow-sm h-100">
           {image?.url && (
             <img
               key={image?.url}
-              className="lozad w-100"
+              className="lozad w-100 img"
               data-src={image?.url}
               alt={image?.alt}
             />
           )}
-          <div className="text-content pt-4 pb-2">
+          <div className="text-content pt-4 px-3 pb-2">
             <h3 className="service-title">
               <DocLink link={button_link}>{title1?.[0]?.text}</DocLink>
             </h3>
@@ -60,6 +60,8 @@ const ServiceItem = ({ data }) => {
           font-weight: 600;
           margin-bottom: 10px;
           color: #222;
+        }
+        .img {
         }
       `}</style>
     </>
