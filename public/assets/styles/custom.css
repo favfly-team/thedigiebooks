@@ -448,3 +448,21 @@ body {
 .btn-menu span {
   background-color: #fff;
 }
+
+body {
+  user-select: none;
+}
+
+.form-info input[type="text"],
+.form-info input[type="email"],
+.form-info input[type="phone"],
+.form-info textarea {
+  color: #000 !important;
+}
+
+.splide__arrow {
+  background: #18ba60 !important;
+}
+.splide__arrow svg {
+  fill: #fff !important;
+}

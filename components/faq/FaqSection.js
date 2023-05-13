@@ -59,6 +59,9 @@ const FaqItem = ({ data }) => {
           height: 12px;
           background-color: #fff;
         }
+        .active {
+          margin: -1px -1px 0px -1px;
+        }
 
         .faq-title:before {
           position: absolute;
