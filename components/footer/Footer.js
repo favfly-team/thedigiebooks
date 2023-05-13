@@ -120,7 +120,9 @@ const Footer = () => {
                         <i className="footer-icon">
                           <FaMapMarkerAlt />
                         </i>
-                        <span>India : 14/110 Golf Club Road</span>
+                        <span>
+                          India : 14/110, Golf Club Road, Kolkata, 700033
+                        </span>
                       </a>
                     </li>
                     <li>
