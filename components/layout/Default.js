@@ -1,6 +1,7 @@
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import WhatsappButton from "../WhatsappButton";
+import StickyButton from "../StickyButton";
+// import WhatsappButton from "../WhatsappButton";
 
 const Layout = ({ children }) => {
   return (
@@ -8,10 +9,11 @@ const Layout = ({ children }) => {
       <Header />
       <div>{children}</div>
       <Footer />
-      <WhatsappButton
+      {/* <WhatsappButton
         number="+917003860702"
         text="Hi Digie Books, I went through your website & want to discuss few things with you"
-      />
+      /> */}
+      <StickyButton />
     </>
   );
 };

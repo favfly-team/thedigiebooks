@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa";
 
 import Link from "next/link";
+import FsLightbox from "fslightbox-react";
+import { useState } from "react";
 
 const Footer = () => {
   const quickLinks = [
@@ -22,6 +24,8 @@ const Footer = () => {
     // { title: "T & C", url: "/terms-and-conditions" },
     { title: "Privacy Policy", url: "/privacy-policy" },
   ];
+
+  const [toggler, setToggler] = useState(false);
 
   return (
     <>
@@ -46,7 +50,8 @@ const Footer = () => {
                       alt="BNI Proud Member"
                     />
                     <img
-                      style={{ width: "100px" }}
+                      onClick={() => setToggler(!toggler)}
+                      style={{ width: "100px", cursor: "pointer" }}
                       src="https://images.prismic.io/thedigiebooks/9c61795e-d93e-424b-95ab-e87efe2ac03a_20f9c6aa-253d-4305-b6c4-9331a7b7232a_png-clipart-iso-9000-iso-9001-2015-international-organization-for-standardization-quality-management-system-business-blue-text-removebg-preview.png"
                       alt="ISO Certified"
                     />
@@ -173,7 +178,12 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-
+      <FsLightbox
+        toggler={toggler}
+        sources={[
+          "https://images.prismic.io/thedigiebooks/3e568672-a379-498e-9896-e2a62bec5764_iso-img.jpg?auto=compress,format",
+        ]}
+      />
       <style jsx>{`
         .footer-heading {
           color: #fff;
