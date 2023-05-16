@@ -6,9 +6,10 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
+import lozad from "lozad";
 import Link from "next/link";
 import FsLightbox from "fslightbox-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
   const quickLinks = [
@@ -26,6 +27,14 @@ const Footer = () => {
   ];
 
   const [toggler, setToggler] = useState(false);
+
+  useEffect(() => {
+    const observer = lozad(".lozad", {
+      rootMargin: "100px 0px", // syntax similar to that of CSS Margin
+    });
+    observer.observe();
+    return () => {};
+  }, []);
 
   return (
     <>
@@ -45,15 +54,16 @@ const Footer = () => {
                   <div className="mt-4 mb-3 d-flex align-items-center">
                     <img
                       style={{ width: "100px" }}
-                      className="mr-3"
-                      src="https://images.prismic.io/thedigiebooks/0c923089-afa5-46bc-a2a1-9e15c5deed3d_BNI+Proud+Member.png"
+                      className="mr-3 lozad"
+                      data-src="https://images.prismic.io/thedigiebooks/0c923089-afa5-46bc-a2a1-9e15c5deed3d_BNI+Proud+Member.png"
                       alt="BNI Proud Member"
                     />
                     <img
                       onClick={() => setToggler(!toggler)}
                       style={{ width: "100px", cursor: "pointer" }}
-                      src="https://images.prismic.io/thedigiebooks/9c61795e-d93e-424b-95ab-e87efe2ac03a_20f9c6aa-253d-4305-b6c4-9331a7b7232a_png-clipart-iso-9000-iso-9001-2015-international-organization-for-standardization-quality-management-system-business-blue-text-removebg-preview.png"
+                      data-src="https://images.prismic.io/thedigiebooks/9c61795e-d93e-424b-95ab-e87efe2ac03a_20f9c6aa-253d-4305-b6c4-9331a7b7232a_png-clipart-iso-9000-iso-9001-2015-international-organization-for-standardization-quality-management-system-business-blue-text-removebg-preview.png?auto=compress,format&w=200"
                       alt="ISO Certified"
+                      className="lozad"
                     />
                   </div>
                 </div>
