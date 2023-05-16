@@ -36,13 +36,13 @@ const FeatureItem = ({ data }) => {
     });
     observer.observe();
     return () => {};
-  }, []);
+  }, [icon?.url]);
 
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="iconbox-item mb-0 d-flex">
         <div className="icon">
-          <img className="lozad" src={icon?.url} alt={icon?.alt} />
+          <img className="lozad" data-src={icon?.url} alt={icon?.alt} />
         </div>
         <div className="iconbox">
           <div className="box-header">
