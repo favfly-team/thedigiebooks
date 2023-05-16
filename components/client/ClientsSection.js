@@ -58,8 +58,8 @@ const ClientItem = ({ data }) => {
     });
     observer.observe();
     return () => {};
-  }, []);
+  }, [image?.url]);
 
-  return <img className="w-100 lozad" src={image?.url} alt={image?.alt} />;
+  return <img className="w-100 lozad" data-src={image?.url} alt={image?.alt} />;
 };
 export default ClientsSection;
