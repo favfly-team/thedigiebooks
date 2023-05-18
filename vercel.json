@@ -5,15 +5,15 @@
       "destination": "/:path"
     },
     {
-      "source": "/partner.html",
+      "source": "/partner",
       "destination": "/partners"
     },
     {
-      "source": "/security.html",
+      "source": "/security",
       "destination": "/why-us"
     },
     {
-      "source": "/service.html",
+      "source": "/service",
       "destination": "/services"
     }
   ]
