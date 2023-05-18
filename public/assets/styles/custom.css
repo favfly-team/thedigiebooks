@@ -470,3 +470,7 @@ body {
 .flat-infomation li.phone {
   border-color: #fff;
 }
+
+.flat-infomation li.email {
+  margin-left: 0;
+}
