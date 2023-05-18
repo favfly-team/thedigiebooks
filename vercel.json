@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/:path+.html",
+      "destination": "/:path"
+    },
+    {
+      "source": "/partner.html",
+      "destination": "/partners"
+    },
+    {
+      "source": "/security.html",
+      "destination": "/why-us"
+    },
+    {
+      "source": "/service.html",
+      "destination": "/services"
+    }
+  ]
+}
