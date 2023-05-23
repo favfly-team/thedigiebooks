@@ -21,7 +21,21 @@ const BlogPostSection = ({ data, uid }) => {
       <div className="row">
         <div className="col-12 mx-auto">
           <div className="wrap-main-post about-v3">
-            <div className="flexslider s2 mb-0">
+            <div className="flexslider s2 mb-0 blog-container">
+              <div className="blog-heading">
+                <h1 className="title">{title?.[0]?.text}</h1>
+                <p className="desc">{description?.[0]?.text}</p>
+                <div className="blog-details-meta">
+                  <ul>
+                    <li>
+                      <i className="icon mr-2">
+                        <FaRegCalendar />
+                      </i>
+                      {dayjs(published_date).format("DD MMM, YYYY")}
+                    </li>
+                  </ul>
+                </div>
+              </div>
               {featured_image?.url && (
                 <div className="mb-4">
                   <img
@@ -32,19 +46,6 @@ const BlogPostSection = ({ data, uid }) => {
                   />
                 </div>
               )}
-
-              <div className="blog-details-meta">
-                <ul>
-                  <li>
-                    <i className="icon mr-2">
-                      <FaRegCalendar />
-                    </i>
-                    {dayjs(published_date).format("DD MMM, YYYY")}
-                  </li>
-                </ul>
-              </div>
-
-              <h1 className="title">{title?.[0]?.text}</h1>
 
               <div className="blog-content box-content">
                 {data?.body?.map((item, index) => (
@@ -76,6 +77,9 @@ const BlogPostSection = ({ data, uid }) => {
             position: relative;
             color: #18ba60;
             top: -2px;
+          }
+          .blog-heading {
+            margin-bottom: 20px;
           }
         `}</style>
       </div>

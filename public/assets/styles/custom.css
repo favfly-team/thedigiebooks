@@ -192,22 +192,24 @@ article.post .content-post .more-link a {
 
 .blog-content h2 {
   font-size: 28px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 .blog-content h3 {
-  font-size: 26px;
-  padding-bottom: 6px;
+  font-size: 22px;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 .blog-content h4 {
-  font-size: 24px;
+  font-size: 20px;
   padding-bottom: 4px;
 }
 .blog-content h5 {
-  font-size: 22px;
+  font-size: 18px;
   padding-bottom: 2px;
 }
 .blog-content h6 {
-  font-size: 20px;
+  font-size: 16px;
   padding-bottom: 2px;
 }
 .blog-content ul {
@@ -473,4 +475,8 @@ body {
 
 .flat-infomation li.email {
   margin-left: 0;
+}
+
+.blog-container p {
+  line-height: 1.6;
 }

@@ -780,9 +780,9 @@ h4 {
   color: #18ba60;
 }
 
-#mainnav .menu > li:last-child a {
+/* #mainnav .menu > li:last-child a {
   padding-right: 0;
-}
+} */
 
 #mainnav .menu > li a i.fa {
   padding-left: 6px;
