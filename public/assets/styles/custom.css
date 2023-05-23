@@ -480,3 +480,8 @@ body {
 .blog-container p {
   line-height: 1.6;
 }
+
+.header.style2 #mainnav .menu > li > a:hover {
+  color: #ffffff !important;
+  background: #18ba60 !important;
+}
