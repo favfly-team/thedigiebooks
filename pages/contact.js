@@ -22,7 +22,7 @@ const ContactPage = ({ doc }) => {
     <>
       <SEO
         doc={doc}
-        url={`https://${process.env.NEXT_PUBLIC_PRISMIC_ID}.${process.env.NEXT_PUBLIC_TLD}/${router.pathname}`}
+        url={`https://${process.env.NEXT_PUBLIC_PRISMIC_ID}.${process.env.NEXT_PUBLIC_TLD}${router.pathname}`}
       />
       <SliceZone sliceZone={doc.data.body} />
     </>
