@@ -4,7 +4,7 @@ const StickyButton = () => {
   return (
     <>
       <Link href="/contact">
-        <span className="sticky-btn">Start your free trial</span>
+        <span className="sticky-btn">Get free trial</span>
       </Link>
 
       <style jsx>{`
@@ -13,7 +13,7 @@ const StickyButton = () => {
           color: white;
           position: fixed;
           z-index: 999;
-          bottom: 20px;
+          top: 140px;
           right: 10px;
           font-size: 18px;
           display: flex;
@@ -21,13 +21,19 @@ const StickyButton = () => {
           align-items: center;
           width: auto;
           height: auto;
-          padding: 12px 15px;
+          padding: 8px 15px;
           text-decoration: none;
           border-radius: 50px;
           animation-name: pulse;
           animation-duration: 1.5s;
           animation-timing-function: ease-out;
           animation-iteration-count: infinite;
+        }
+
+        @media (max-width: 991px) {
+          .sticky-btn {
+            top: 240px;
+          }
         }
 
         @keyframes pulse {

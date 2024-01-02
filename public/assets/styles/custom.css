@@ -448,7 +448,7 @@ body {
 .btn-menu:before,
 .btn-menu:after,
 .btn-menu span {
-  background-color: #fff;
+  background-color: #000;
 }
 
 body {
@@ -484,4 +484,18 @@ body {
 .header.style2 #mainnav .menu > li > a:hover {
   color: #ffffff !important;
   background: #18ba60 !important;
+}
+
+.flat-callback h2 {
+  text-transform: capitalize;
+}
+.flat-callback h2 strong {
+  color: #18ba60;
+}
+
+@media (max-width: 591px) {
+  .flat-callback h2 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
 }

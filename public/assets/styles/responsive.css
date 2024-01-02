@@ -87,11 +87,6 @@
     margin-bottom: 15px;
   }
 
-  .flat-infomation {
-    float: none;
-    margin-bottom: 20px;
-  }
-
   .flat-iconbox.iconbox-style1,
   .flat-iconbox.iconbox-style2,
   .flat-iconbox.style-3 {
@@ -172,7 +167,7 @@
 
   .top .flat-questions {
     padding-left: 0;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
 
   .header.widget-header {
@@ -475,7 +470,7 @@
 }
 
 /* Mobile Portrait Size */
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 768px) {
   .flat-questions a.appointment {
     display: -webkit-inline-box;
   }

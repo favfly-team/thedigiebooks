@@ -1,16 +1,33 @@
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
-const TopBar = () => {
+const TopBar = ({ value }) => {
+  const [show, setShow] = useState(true);
+  const [prevVal, setPrevVal] = useState(0);
+
+  useEffect(() => {
+    if (value < prevVal) {
+      setShow(true);
+      setPrevVal(value);
+    } else if (value > prevVal) {
+      setShow(false);
+      setPrevVal(value);
+    }
+  }, [value, prevVal]);
+
   return (
-    <div className="top">
+    <div className={`top ${show ? "d-block" : "d-none"}`}>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <ul className="flat-infomation">
+            <ul className="flat-infomation d-md-block" id="flat-infomation">
               <li className="phone">
                 <FaPhoneAlt className="mr-2" />
-                Call us: <a title="phone">+91 70038 60702</a>
+                Call us:{" "}
+                <a title="phone" href="tel:+919831423555">
+                  +91 98314 23555
+                </a>
               </li>
               <li className="email">
                 <FaEnvelope className="mr-2" />

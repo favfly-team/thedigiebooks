@@ -107,11 +107,11 @@ const Footer = () => {
                   <h3 className="footer-heading">Contact Us</h3>
                   <ul className="one-half">
                     <li>
-                      <a className="d-flex">
+                      <a className="d-flex" href="tel:+919831423555">
                         <i className="footer-icon">
                           <FaPhoneAlt className="mr-1" />
                         </i>
-                        India : +91 70038 60702
+                        India : +91 98314 23555
                       </a>
                     </li>
                     <li>

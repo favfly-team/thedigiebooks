@@ -72,7 +72,7 @@ const CtaFormSection = ({ slice }) => {
         <div className="row align-items-center">
           <div className="col-md-4 mb-5 mb-lg-0">
             <div className="text-block-callback">
-              <RichText render={heading} />
+              <h2>{heading?.[0]?.text}</h2>
               <div className="text-callback-content">
                 <RichText render={description1} linkResolver={linkResolver} />
               </div>

@@ -48,7 +48,7 @@ const HeaderTop = () => {
                 <br />
                 <span className="d-flex mb-2 mt-2">
                   <span className="mr-2">India:</span>
-                  <span>+91 70038 60702</span>
+                  <span>+91 98314 23555</span>
                 </span>
                 <span className="d-flex mb-2">
                   <span className="mr-2">USA:</span>

@@ -13,5 +13,6 @@ export { default as DetailsSection } from "../components/details/DetailsSection"
 export { default as FeaturesBoxSection } from "../components/features/FeaturesBoxSection";
 export { default as ContactSection } from "../components/contact/ContactSection";
 export { default as CtaFormSection } from "../components/cta/CtaFormSection";
+export { default as CtaBgSection } from "../components/cta/CtaBgSection";
 
 export { default as SliceZone } from "./SliceZone";

@@ -1,22 +1,30 @@
 import Link from "next/link";
-import HeaderTop from "./HeaderTop";
+// import HeaderTop from "./HeaderTop";
 import TopBar from "./TopBar";
 import { FaChevronDown, FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
-  // useEffect(() => {
-  //   window.addEventListener("scroll", function () {
-  //     const header = document.getElementById("rs-header");
-  //     setScrollValue(window.scrollY);
-  //     if (window.scrollY > 150) {
-  //       header.classList.add("sticky");
-  //     } else {
-  //       header.classList.remove("sticky");
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      const header = document.getElementById("headerMain");
+
+      if (window.scrollY > 150) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    });
+  }, []);
+
+  const [scrollValue, setScrollValue] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      setScrollValue(window.scrollY);
+    });
+  }, []);
 
   // const logoSrc = "/assets/img/logo.png";
 
@@ -39,29 +47,39 @@ const Header = () => {
   }, [router]);
 
   return (
-    <>
-      <TopBar />
-      <HeaderTop />
-      <div style={{ position: "sticky", top: "0", zIndex: "9999" }}>
+    <div id="headerMain">
+      <TopBar value={scrollValue} />
+      {/* <HeaderTop /> */}
+      <div>
         <header id="header" className="header bg-color style2">
           <div className="container">
-            <div className="row justify-content-between justify-content-lg-center">
-              <div className="header-wrap">
+            <div className="row justify-content-between justify-content-lg-center w-100">
+              <div className="header-wrap w-100">
                 <div className="col-md-12">
-                  <div className="nav-wrap">
+                  <div className="nav-wrap w-100">
                     <div
                       className="btn-menu"
                       onClick={() => setShowMobileMenu(!showMobileMenu)}>
                       <span></span>
                     </div>
 
-                    <nav id="mainnav" className="mainnav">
-                      <ul className="menu">
-                        {navItems?.map((item, index) => (
-                          <NavItem key={index} data={item} />
-                        ))}
-                      </ul>
-                    </nav>
+                    <div className="navItem">
+                      <Link href="/">
+                        <img
+                          className="logo-image"
+                          src="https://images.prismic.io/thedigiebooks/806e55c9-d396-48ff-8e2a-dc1e532308a4_Your+Trusted+Accounting+Partner+%282%29.png?auto=compress,format"
+                          alt="Logo"
+                        />
+                      </Link>
+
+                      <nav id="mainnav" className="mainnav">
+                        <ul className="menu">
+                          {navItems?.map((item, index) => (
+                            <NavItem key={index} data={item} />
+                          ))}
+                        </ul>
+                      </nav>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -79,7 +97,45 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-    </>
+      <style jsx>{`
+        .sticky {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 9999;
+        }
+        .logo-image {
+          height: 60px;
+          margin-right: 40px;
+        }
+
+        .navItem {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .appointment {
+          background-color: #18ba60;
+          font-size: 14px;
+          padding: 11px 27px 12px 27px;
+          font-weight: 600;
+          letter-spacing: 0;
+        }
+
+        @media (max-width: 991px) {
+          .navItem {
+            justify-content: flex-start;
+          }
+          .logo-image {
+            position: absolute;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 

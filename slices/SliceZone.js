@@ -14,6 +14,7 @@ import {
   FeaturesBoxSection,
   ContactSection,
   CtaFormSection,
+  CtaBgSection,
 } from "./";
 
 const SliceZone = ({ sliceZone, blogsData }) => (
@@ -56,6 +57,8 @@ const SliceZone = ({ sliceZone, blogsData }) => (
           return <ContactSection slice={slice} key={`slice-${index}`} />;
         case "cta_form_section":
           return <CtaFormSection slice={slice} key={`slice-${index}`} />;
+        case "cta_bg_section":
+          return <CtaBgSection slice={slice} key={`slice-${index}`} />;
 
         default:
           return null;

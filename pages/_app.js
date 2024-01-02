@@ -16,47 +16,47 @@ function MyApp({ Component, pageProps }) {
     NProgress.done();
   });
 
-  useEffect(() => {
-    // Disable right-click
-    document.addEventListener(
-      "contextmenu",
-      function (e) {
-        e.preventDefault();
-      },
-      false
-    );
+  // useEffect(() => {
+  //   // Disable right-click
+  //   document.addEventListener(
+  //     "contextmenu",
+  //     function (e) {
+  //       e.preventDefault();
+  //     },
+  //     false
+  //   );
 
-    // Disable image drag
-    document.addEventListener(
-      "dragstart",
-      function (e) {
-        e.preventDefault();
-      },
-      false
-    );
+  //   // Disable image drag
+  //   document.addEventListener(
+  //     "dragstart",
+  //     function (e) {
+  //       e.preventDefault();
+  //     },
+  //     false
+  //   );
 
-    // Disable copy and cut keyboard shortcuts
-    document.addEventListener(
-      "keydown",
-      function (e) {
-        if (e.ctrlKey && (e.code === "KeyC" || e.code === "KeyX")) {
-          e.preventDefault();
-        }
-      },
-      false
-    );
+  //   // Disable copy and cut keyboard shortcuts
+  //   document.addEventListener(
+  //     "keydown",
+  //     function (e) {
+  //       if (e.ctrlKey && (e.code === "KeyC" || e.code === "KeyX")) {
+  //         e.preventDefault();
+  //       }
+  //     },
+  //     false
+  //   );
 
-    // Disable F12 key press
-    document.addEventListener(
-      "keydown",
-      function (e) {
-        if (e.code === "F12") {
-          e.preventDefault();
-        }
-      },
-      false
-    );
-  }, []);
+  //   // Disable F12 key press
+  //   document.addEventListener(
+  //     "keydown",
+  //     function (e) {
+  //       if (e.code === "F12") {
+  //         e.preventDefault();
+  //       }
+  //     },
+  //     false
+  //   );
+  // }, []);
 
   return (
     <>

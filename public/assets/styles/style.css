@@ -586,7 +586,8 @@ h4 {
 /* Top
 -------------------------------------------------------------- */
 .top {
-  background-color: #04a0ea;
+  /* background-color: #04a0ea; */
+  background-color: #2e363a;
   color: #ffffff;
   font-size: 12px;
   padding: 10px 0;
@@ -597,6 +598,12 @@ h4 {
   line-height: 25px;
 }
 
+@media only screen and (max-width: 768px) {
+  .flat-infomation {
+    float: none;
+    margin-bottom: 20px;
+  }
+}
 .flat-infomation li {
   display: inline-block;
   position: relative;
@@ -650,7 +657,7 @@ h4 {
 }
 
 .flat-questions a.appointment:hover {
-  background-color: #2e363a;
+  /* background-color: #2e363a; */
   color: #ffffff;
 }
 
@@ -758,9 +765,6 @@ h4 {
 
 /* Main Menu
 ---------------------------------------------------------------*/
-.nav-wrap {
-  float: right;
-}
 
 #mainnav .menu > li {
   display: inline-block;
@@ -1984,16 +1988,16 @@ article.post.style2 .featured-post ul.post-date {
 }
 
 .header.style2 {
-  background-color: #04a0ea;
+  /* background-color: #04a0ea; */
+  background-color: #fff;
 }
 
 .header.style2 .nav-wrap {
-  float: left;
   color: #ffffff;
 }
 
 .header.style2 #mainnav .menu > li > a {
-  color: #ffffff;
+  color: #2e363a;
   line-height: 65px;
 }
 
@@ -2905,7 +2909,6 @@ article.post .content-post {
 
 .btn-menu {
   display: none;
-  float: right;
   position: relative;
   background: transparent;
   cursor: pointer;
