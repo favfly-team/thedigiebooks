@@ -59,7 +59,8 @@ const Header = () => {
                   <div className="nav-wrap w-100">
                     <div
                       className="btn-menu"
-                      onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                      onClick={() => setShowMobileMenu(!showMobileMenu)}
+                    >
                       <span></span>
                     </div>
 
@@ -67,7 +68,7 @@ const Header = () => {
                       <Link href="/">
                         <img
                           className="logo-image"
-                          src="https://images.prismic.io/thedigiebooks/806e55c9-d396-48ff-8e2a-dc1e532308a4_Your+Trusted+Accounting+Partner+%282%29.png?auto=compress,format"
+                          src="https://images.prismic.io/thedigiebooks/ZshTFUaF0TcGJWav_Digiebookslogo.png?auto=format,compress"
                           alt="Logo"
                         />
                       </Link>
@@ -89,7 +90,8 @@ const Header = () => {
         </header>
         <nav
           id="mainnav-mobi"
-          className={`mainnav d-lg-none ${showMobileMenu ? "" : "d-none"}`}>
+          className={`mainnav d-lg-none ${showMobileMenu ? "" : "d-none"}`}
+        >
           <ul className="menu">
             {navItems?.map((item, index) => (
               <NavItem key={index} data={item} />
@@ -132,6 +134,7 @@ const Header = () => {
             top: -24px;
             left: 50%;
             transform: translateX(-50%);
+            margin-left: 30px;
           }
         }
       `}</style>
