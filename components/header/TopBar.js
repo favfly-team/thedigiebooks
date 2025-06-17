@@ -25,8 +25,11 @@ const TopBar = ({ value }) => {
               <li className="phone">
                 <FaPhoneAlt className="mr-2" />
                 Call us:{" "}
-                <a title="phone" href="tel:+919831423555">
-                  +91 98314 23555
+                <a title="phone" href="tel:+919831423555" className="mr-1">
+                  +91 98314 23555,
+                </a>
+                <a title="phone" href="tel:+12404815325">
+                  +1 240-481-5325
                 </a>
               </li>
               <li className="email">
